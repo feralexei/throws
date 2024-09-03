@@ -3,13 +3,11 @@ package Throws;
 public class CuentaBancaria {
     private double saldoInicial;
 
-    // Constructor
+    // constructor
     public CuentaBancaria(double saldoInicial) {
         this.saldoInicial = saldoInicial;
     }
 
-    // El constructor por defecto, inicializo el saldo en 0 si no se recibe valor
-    // a// la apertura.
     public CuentaBancaria() {
         this.saldoInicial = 0;
     }
@@ -22,15 +20,15 @@ public class CuentaBancaria {
         this.saldoInicial = saldoInicial;
     }
 
-    // Método para realizar retiros
+    // método para realizar retiros
     public void retirar(double cantidad) throws SaldoInsuficienteException {
 
-        // Verificar si el saldo es suficiente para el retiro
+        // vrifica si el saldo es suficiente
         if (cantidad > saldoInicial) {
-            // Lanzar una excepción personalizada si el saldo es
+            //si no es suficiente lanza una excepcion
             throw new SaldoInsuficienteException("Saldo insuficiente para realizar el retiro");
         } else {
-            // Actualizar el saldo
+            // actualiza el saldo
             saldoInicial -= cantidad;
             System.out.println("Retiro exitoso. Saldo restante: " + saldoInicial);
         }
@@ -38,7 +36,6 @@ public class CuentaBancaria {
 }
 
 class SaldoInsuficienteException extends Exception {
-    // Constructor que acepta un mensaje personalizado
     public SaldoInsuficienteException(String mensaje) {
         super(mensaje);
     }
