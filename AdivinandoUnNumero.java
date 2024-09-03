@@ -32,9 +32,8 @@ public class AdivinandoUnNumero {
                 System.out.println("Entrada no válida. Debes ingresar un número.");
                 scanner.next();
                 intentos++;
-            } finally {
-                scanner.close();
             }
         }
+       scanner.close();
     }
 }

@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class PalabraClave {
 
     private String clave;
+    
     public static void main(String[] args) {
         PalabraClave pc = new PalabraClave();
         try {
