@@ -9,18 +9,18 @@ public class DivisionSegura {
 
     public static void obtenerNumeros() {
         Scanner scanner = new Scanner(System.in);
-        // Pedir al usuario que ingrese dos números enteros
+
         System.out.print("Ingrese el dividendo (número a dividir): ");
         int dividendo = scanner.nextInt();
         System.out.print("Ingrese el divisor (número por el cual dividir): ");
 
+        
         int divisor = scanner.nextInt();
-        // Realizar la división segura
         realizarDivision(dividendo, divisor);
         scanner.close();
     }
 
-    // Método para realizar la división segura
+    //metodo division
     public static void realizarDivision(int dividendo, int divisor) {
         try {
             double resultado = dividir(dividendo, divisor);
@@ -31,11 +31,11 @@ public class DivisionSegura {
         }
     }
 
-    // Método para realizar la división
     public static double dividir(int dividendo, int divisor) {
         if (divisor == 0) {
-            throw new ArithmeticException(); // Lanzar una excepción si el divisor es cero
+            throw new ArithmeticException(); 
         }
         return (double) dividendo / divisor;
     }
+
 }
